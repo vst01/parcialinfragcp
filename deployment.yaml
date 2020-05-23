@@ -54,10 +54,10 @@ spec:
   template:
     metadata:
       labels:
-        app: appweb
+        app: web
     spec:
       containers:
-      - name: appweb
+      - name: web
         image: sockshead/react-img:latest
         imagePullPolicy: Always
         ports:
