@@ -1,0 +1,23 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: appweb1-service
+spec:
+  selector:
+    app: appweb1
+  ports:
+    - port: 80 # Default port for image
+      nodePort: 31000
+  type: NodePort
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: appweb2-service
+spec:
+  selector:
+    app: appweb2
+  ports:
+    - port: 80 # Default port for image
+      nodePort: 31001
+  type: NodePort
